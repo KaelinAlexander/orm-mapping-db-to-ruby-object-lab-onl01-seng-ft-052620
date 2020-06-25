@@ -71,7 +71,7 @@ class Student
     WHERE grade = 10
     LIMIT 1
     SQL
-    student = DB[:conn].execute(sql).map do |row|
+    student = DB[:conn].execute(sql).each do |row|
       self.new_from_db(row)
     end
   end
