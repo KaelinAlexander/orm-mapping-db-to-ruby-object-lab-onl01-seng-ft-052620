@@ -70,6 +70,7 @@ class Student
     FROM students
     WHERE grade = 10
     ORDER BY id
+    LIMIT 1
     SQL
     DB[:conn].execute(sql)
   end
