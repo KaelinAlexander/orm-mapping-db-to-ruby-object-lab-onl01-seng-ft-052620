@@ -60,6 +60,7 @@ class Student
     SQL
     students = DB[:conn].execute(sql, pupils).map do |row|
       self.new_from_db(row)
+    end
       students
   end
 
