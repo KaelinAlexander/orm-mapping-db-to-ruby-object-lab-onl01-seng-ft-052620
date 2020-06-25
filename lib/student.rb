@@ -31,7 +31,7 @@ class Student
     end.first
   end
 
-  def all_students_in_grade_9
+  def self.all_students_in_grade_9
     sql = <<-SQL
     SELECT *
     FROM students
@@ -40,7 +40,7 @@ class Student
     DB[:conn].execute(sql)
   end
 
-  def students_below_12th_grade
+  def self.students_below_12th_grade
     sql = <<-SQL
     SELECT *
     FROM students
