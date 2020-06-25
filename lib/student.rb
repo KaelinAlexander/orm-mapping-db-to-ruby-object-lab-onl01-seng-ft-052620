@@ -62,8 +62,6 @@ class Student
     SQL
     attr = DB[:conn].execute(sql, pupils)[0]
       self.new_from_db(attr)
-    end
-      students
   end
 
   def self.first_student_in_grade_10
