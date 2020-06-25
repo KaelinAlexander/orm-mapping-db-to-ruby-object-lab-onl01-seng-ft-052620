@@ -70,8 +70,7 @@ class Student
     WHERE grade = 10
     LIMIT 1
     SQL
-    DB[:conn].execute(sql, number).map do |row|
-      self.new_from_db(row)
+    DB[:conn].execute(sql, number)
     end
   end
 
@@ -91,7 +90,6 @@ class Student
       INSERT INTO students (name, grade)
       VALUES (?, ?)
     SQL
-
     DB[:conn].execute(sql, self.name, self.grade)
   end
 
