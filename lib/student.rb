@@ -75,7 +75,6 @@ class Student
     SQL
     attr = DB[:conn].execute(sql)[0]
       self.new_from_db(attr)
-    end
     student
   end
 
