@@ -71,7 +71,7 @@ class Student
     WHERE grade = 10
     ORDER BY id
     SQL
-    student = DB[:conn].execute(sql)
+    DB[:conn].execute(sql)
   end
 
   def self.all_students_in_grade_x(grade)
