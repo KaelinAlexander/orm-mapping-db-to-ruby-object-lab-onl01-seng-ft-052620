@@ -61,7 +61,7 @@ class Student
     LIMIT ?
     SQL
     attr = DB[:conn].execute(sql, pupils)[0]
-      self.new_from_db(row)
+      self.new_from_db(attr)
     end
       students
   end
