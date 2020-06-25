@@ -74,8 +74,8 @@ class Student
     LIMIT 1
     SQL
     attr = DB[:conn].execute(sql)[0]
-      self.new_from_db(attr)
-    student
+      new_student = self.new_from_db(attr)
+    new_student
   end
 
   def self.all_students_in_grade_X(grade)
