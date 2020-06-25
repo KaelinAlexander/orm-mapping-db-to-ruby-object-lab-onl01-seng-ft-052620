@@ -59,7 +59,6 @@ class Student
     LIMIT ?
     SQL
     DB[:conn].execute(sql, number)
-    end
   end
 
   def self.first_student_in_grade_10
@@ -70,7 +69,6 @@ class Student
     LIMIT 1
     SQL
     DB[:conn].execute(sql, number)
-    end
   end
 
   def self.all_students_in_grade_x(grade)
@@ -80,7 +78,6 @@ class Student
     WHERE grade = ?
     SQL
     DB[:conn].execute(sql, grade)
-    end
   end
 
   def save
